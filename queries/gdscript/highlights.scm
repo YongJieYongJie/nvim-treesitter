@@ -10,7 +10,7 @@
 (null) @constant
 (setter) @function
 (getter) @function
-(static_keyword) @keyword
+(static_keyword) @type.qualifier
 (tool_statement) @keyword
 (breakpoint_statement) @keyword
 (inferred_type) @operator
@@ -20,7 +20,7 @@
   (name) @type) @keyword
 
 (const_statement
-  (name) @constant) @keyword
+  (name) @constant) @type.qualifier
 
 ((identifier) @variable.builtin
   (#eq? @variable.builtin "self"))
