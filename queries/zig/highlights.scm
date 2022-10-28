@@ -93,6 +93,18 @@ field_constant: (IDENTIFIER) @constant
 [
   "allowzero"
   "volatile"
+  "threadlocal"
+  "inline"
+  "noinline"
+  "noalias"
+] @type.qualifier
+
+[
+  "asm"
+  "callconv"
+] @attribute
+
+[
   "anytype"
   "anyframe"
   (BuildinTypeExpr)
@@ -130,12 +142,25 @@ field_constant: (IDENTIFIER) @constant
 ] @keyword.operator
 
 [
+  "packed"
+  "opaque"
+  "comptime"
+] @storageclass
+
+[
   "struct"
   "enum"
   "union"
   "error"
-  "packed"
-  "opaque"
+  "defer"
+  "errdefer"
+  "async"
+  "nosuspend"
+  "await"
+  "suspend"
+  "resume"
+  "export"
+  "extern"
 ] @keyword
 
 [
@@ -148,8 +173,6 @@ field_constant: (IDENTIFIER) @constant
 [
   "const"
   "var"
-  "comptime"
-  "threadlocal"
   "fn"
 ] @keyword.function
 
@@ -165,31 +188,9 @@ field_constant: (IDENTIFIER) @constant
   "continue"
 ] @keyword.return
 
-; Macro
-[
-  "defer"
-  "errdefer"
-  "async"
-  "nosuspend"
-  "await"
-  "suspend"
-  "resume"
-  "export"
-  "extern"
-] @function.macro
-
-; PrecProc
-[
-  "inline"
-  "noinline"
-  "asm"
-  "callconv"
-  "noalias"
-] @attribute
-
 [
   "linksection"
-  "align" 
+  "align"
 ] @function.builtin
 
 [
