@@ -3,7 +3,6 @@
 	(kProgram)
 	(kLibrary)
 	(kUnit)
-	(kUses)
 
 	(kBegin)
 	(kEnd)
@@ -13,13 +12,10 @@
 	(kThreadvar)
 	(kConst)
 	(kResourcestring)
-	(kConstref)
 	(kOut)
 	(kType)
 	(kLabel)
 	(kExports)
-
-	(kAbsolute)
 
 	(kProperty)
 	(kRead)
@@ -39,7 +35,6 @@
 	(kSet)
 	(kOf)
 	(kHelper)
-	(kPacked)
 
 	(kInherited)
 
@@ -57,14 +52,6 @@
 	(kImplementation)
 	(kInitialization)
 	(kFinalization)
-
-	(kPublished)
-	(kPublic)
-	(kProtected)
-	(kPrivate)
-	(kStrict)
-	(kRequired)
-	(kOptional)
 
 	(kTry)
 	(kExcept)
@@ -91,7 +78,27 @@
 	(kThen)
 	(kElse)
 ] @conditional
-	
+
+[
+	(kPublished)
+	(kPublic)
+	(kProtected)
+	(kPrivate)
+
+	(kStrict)
+	(kRequired)
+	(kOptional)
+
+	(kConstref)
+] @type.qualifier
+
+[
+	(kPacked)
+
+	(kAbsolute)
+] @storageclass
+
+(kUses) @include
 
 ; -- Attributes
 
@@ -243,7 +250,7 @@
 ; -- Comments
 
 (comment)         @comment
-(pp)              @function.macro
+(pp)              @preproc
 
 ; -- Type declaration
 
