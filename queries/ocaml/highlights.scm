@@ -96,11 +96,15 @@
 
 [
   "and" "as" "assert" "begin" "class" "constraint"
-  "end" "external" "in"
-  "inherit" "initializer" "lazy" "let" "match" "method" "module"
-  "mutable" "new" "nonrec" "object" "of" "private" "rec" "sig" "struct"
-  "type" "val" "virtual" "when" "with"
+  "end" "external" "in" "inherit" "initializer"
+  "lazy" "let" "match" "method" "module"
+  "new" "object" "of" "rec" "sig" "struct"
+  "type" "val" "when" "with"
 ] @keyword
+
+[
+  "mutable" "nonrec" "private" "virtual"
+] @type.qualifier
 
 ["fun" "function" "functor"] @keyword.function
 
