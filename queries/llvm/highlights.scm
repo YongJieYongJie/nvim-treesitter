@@ -68,10 +68,6 @@
   "ifunc"
   "section"
   "comdat"
-  "thread_local"
-  "localdynamic"
-  "initialexec"
-  "localexec"
   "any"
   "exactmatch"
   "largest"
@@ -80,15 +76,26 @@
   "distinct"
   "attributes"
   "vscale"
-  "no_cfi"
 ] @keyword
 
-(linkage_aux) @keyword
-(dso_local) @keyword
-(visibility) @keyword
-(dll_storage_class) @keyword
-(unnamed_addr) @keyword
-(attribute_name) @keyword
+
+[
+  "no_cfi"
+  (dso_local)
+  (linkage_aux)
+  (visibility)
+] @type.qualifier
+
+[
+  "thread_local"
+  "localdynamic"
+  "initialexec"
+  "localexec"
+  (unnamed_addr)
+  (dll_storage_class)
+] @storageclass
+
+(attribute_name) @attribute
 
 (function_header [
     (linkage)
