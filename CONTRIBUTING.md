@@ -162,7 +162,6 @@ effect on highlighting. We will work on improving highlighting in the near futur
 @type.qualifier        ; type qualifiers (e.g. `const`)
 
 @storageclass          ; visibility/life-time modifiers
-@storageclass.lifetime ; life-time modifiers (e.g. `static`)
 @attribute             ; attribute annotations (e.g. Python decorators)
 @field                 ; object and struct fields
 @property              ; similar to `@field`
@@ -232,7 +231,7 @@ Used for XML-like tags.
 
 ```scheme
 @spell   ; for defining regions to be spellchecked
-@nospell ; for defining regions that should _not_ be spellchecked
+@nospell ; for defining regions that should NOT be spellchecked
 ```
 
 #### Non-standard
@@ -241,6 +240,8 @@ These captures are used by some languages but don't have any default highlights.
 They fall back to the parent capture if they are not manually defined.
 
 ```scheme
+@storageclass.lifetime
+
 @variable.global
 ```
 
@@ -264,7 +265,6 @@ They fall back to the parent capture if they are not manually defined.
 @scope                 ; scope block
 @reference             ; identifier reference
 ```
-
 
 #### Definition Scope
 
@@ -300,7 +300,7 @@ You can define folds for a given language by adding a `folds.scm` query :
 @fold ; fold this node
 ```
 
-If the `fold.scm` query is not present, this will fallback to the `@scope` captures in the `locals`
+If the `folds.scm` query is not present, this will fall back to the `@scope` captures in the `locals`
 query.
 
 ### Injections
