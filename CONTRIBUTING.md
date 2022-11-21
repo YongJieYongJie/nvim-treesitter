@@ -240,6 +240,7 @@ These captures are used by some languages but don't have any default highlights.
 They fall back to the parent capture if they are not manually defined.
 
 ```scheme
+@attribute.builtin
 @conditional.ternary
 @storageclass.lifetime
 @variable.global
